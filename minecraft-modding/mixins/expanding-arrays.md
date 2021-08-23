@@ -38,7 +38,6 @@ public class TargetMixin implements TargetDuck {
 ```
 
 ## The Long Explanation
-
 Sometimes you need to expand some array that Mojang has mercilessly hardcoded, ~~in the true horror fashion that Mojang is known for~~.
 
 Take a look at this:
@@ -74,7 +73,7 @@ The `GROUPS` array is hardcoded to only support 12 entries, which corresponds to
 
 So imagine you're the designer of the new, state-of-the-art modding API. The users of this API expects support for custom item groups and creative tabs, just like other modding APIs like Forge, Fabric and Quilt. What would you do? After all, arrays have a fixed size; there is no possible way to expand them... riiiiiiiiight????
 
-## The Switcheroo
+### The Switcheroo
 As it turns out, Mixin provides an easy way of doing just that.
 
 A mixin class can access private fields of its target class with the `@Shadow` annotation. Consider this example:
@@ -118,6 +117,7 @@ public class FooMixin {
     But alas, the Java compiler doesn't know any better — in our case, since the field is already initialized, there's no point in assigning a value to it again. Therefore the Mixin team introduced `@Final` to spare some of our (and the Java compiler's) brain cells. God bless them.
 </details>
 
+### Let's `final`ly break `final`
 Now being able to read them is obviously advantageous, but being able to *write* to them would be even better.
 
 Introducing... the `@Shadow @Mutable @Final` trio.

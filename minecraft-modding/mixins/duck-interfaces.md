@@ -85,6 +85,9 @@ However, this is all done *in runtime*. Without advanced (and often dangerous) A
 
 That is, until we add a **duck interface** that contains our custom methods.
 
+### 🦆s go quack quack
+This is how a **duck interface** looks like:
+
 ```java
 public interface TargetDuck {
     // it's a recommended practice to prefix your custom methods
@@ -195,6 +198,8 @@ public void someFunc(Tricky tricky) {
 }
 ```
 
+### We're still going to talk about how FAPI does it, innit?
+...yeah right.
 > The following information is accurate as of Fabric API version `0.37.0+1.17`.
-> 
+
 One prominent example of a `final` class requiring such brute-force casting in Minecraft modding is `ItemStack`, which Fabric API needed to store some additional data and logic. (see `net.fabricmc.fabric.impl.tool.attribute.ItemStackContext`)
