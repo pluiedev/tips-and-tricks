@@ -14,7 +14,8 @@ But that's enough blabbering from me, onward to the big ToC™...
   - **NOTE**: The following articles mainly use Yarn and its derivative Quilt Mappings. Users with other mappings may need to manually remap to their current mappings.
   - Mixins
     - [Duck Interfaces](minecraft-modding/mixins/duck-interfaces.md)
-    - [Expanding arrays](minecraft-modding/mixins/expanding-arrays.md)
+    - [Expanding Arrays (and Immutable Collections)](minecraft-modding/mixins/expanding-arrays.md)
+    - [Mixins Should Always Be `abstract`](minecraft-modding/mixins/mixins-should-always-be-abstract.md)
 
 
 ## License
