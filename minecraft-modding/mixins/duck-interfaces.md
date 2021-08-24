@@ -192,6 +192,8 @@ Simply suppress the warning:
 @SuppressWarnings("ConstantConditions") 
 public void someFunc(Tricky tricky) {
     // method 2: 👇 use this to suppress one problematic line
+    // this is *specific* for IDEs on the IntelliJ platform (i.e. IDEA, Android Studio, etc)
+    
     //noinspection ConstantConditions
     var other = (TrickyDuck) (Object) tricky;
     other.modid$newMethod();
