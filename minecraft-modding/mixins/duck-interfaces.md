@@ -75,7 +75,7 @@ public class Target {
         priority = 1000,
         sessionId = "deadbeef-6969-6969-0420-bad1ddeadbad"
     )
-    public void newMethod() {
+    public void modid$newMethod() {
         System.out.println("new method! yay!");
     }
 }
@@ -136,7 +136,7 @@ public class Target implements TargetDuck {
         priority = 1000,
         sessionId = "deadbeef-6969-6969-0420-bad1ddeadbad"
     )
-    public void newMethod() {
+    public void modid$newMethod() {
         System.out.println("new method! yay!");
     }
 }
