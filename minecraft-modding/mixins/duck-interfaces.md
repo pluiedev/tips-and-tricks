@@ -21,7 +21,7 @@ public interface TargetDuck {
 
 // how to implement it:
 @Mixin(Target.class)
-public class TargetMixin
+public abstract class TargetMixin
     implements TargetDuck // very important
 {
     @Override
@@ -44,8 +44,8 @@ public class ConsumerClass {
         
         // More info in the long explanation.
 
-        duck.modid$excitingNewBehavior(3); // >> "lesser than four! *boos*"
-        duck.modid$excitingNewBehavior(69); // >> "greater than four! *gasps*"
+        duck.modid$excitingNewBehavior(3); // >> lesser than four! *boos*
+        duck.modid$excitingNewBehavior(69); // >> greater than four! *gasps*
     }
 }
 ```
@@ -62,7 +62,7 @@ public class Target {
 }
 
 @Mixin(Target.class)
-public class TargetMixin {
+public abstract class TargetMixin {
     public void newMethod() {
         System.out.println("new method! yay!");
     }
@@ -122,7 +122,7 @@ By casting a target object to our duck, we can get ahold of our sweet, sweet met
 
 ```java
 @Mixin(Target.class)
-public class TargetMixin implements TargetDuck {
+public abstract class TargetMixin implements TargetDuck {
     @Override
     public void modid$newMethod() {
         System.out.println("new method! yay!");
@@ -163,7 +163,7 @@ public interface TrickyDuck {
 }
 
 @Mixin(Tricky.class)
-public class TrickyMixin implements TrickyDuck {
+public abstract class TrickyMixin implements TrickyDuck {
     @Override
     public void modid$newMethod() {
         System.out.println("new method! yay!");
@@ -200,6 +200,9 @@ public void someFunc(Tricky tricky) {
 
 ### We're still going to talk about how FAPI does it, innit?
 ...yeah right.
-> The following information is accurate as of Fabric API version `0.37.0+1.17`.
+> The following names are in **Yarn/Quilt Mappings**, and the following information is accurate as of Fabric API version `0.37.0+1.17`.
+> 
+> Users of other mappings may need to manually translate said names to the corresponding name in their desired mappings.
+
 
 One prominent example of a `final` class requiring such brute-force casting in Minecraft modding is `ItemStack`, which Fabric API needed to store some additional data and logic. (see `net.fabricmc.fabric.impl.tool.attribute.ItemStackContext`)
