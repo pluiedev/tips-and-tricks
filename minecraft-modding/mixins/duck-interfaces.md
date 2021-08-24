@@ -21,7 +21,7 @@ public interface TargetDuck {
 
 // how to implement it:
 @Mixin(Target.class)
-public class Target
+public class TargetMixin
     implements TargetDuck // very important
 {
     @Override
