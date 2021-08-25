@@ -103,11 +103,11 @@ In Java, you can cast (nearly) all objects to another interface, and the compile
 ```java
 public class Target {}
 
-public class Targetson extends Target implements OtherInterface {}
+public class TargetChild extends Target implements OtherInterface {}
 
 public class SomewhereElse {
     public void someFunc(Target target) {
-        // `target` may be a Targetson, or some other class that
+        // `target` may be a TargetChild, or some other class that
         // implements OtherInterface. The compiler simply doesn't know.
         // Hence, this is perfectly okay in compile time.
         var other = (OtherInterface) target;
@@ -193,7 +193,7 @@ Simply suppress the warning:
 public void someFunc(Tricky tricky) {
     // method 2: 👇 use this to suppress one problematic line
     // this is *specific* for IDEs on the IntelliJ platform (i.e. IDEA, Android Studio, etc)
-    
+
     //noinspection ConstantConditions
     var other = (TrickyDuck) (Object) tricky;
     other.modid$newMethod();
