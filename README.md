@@ -3,9 +3,9 @@ I like to help people with weird tech issues, since when I was less experienced,
 
 And unsurprisingly, I learned the most from the third kind, the most eloquent and kind-hearted of those "pros". 
 
-Once I've become a semi-"pro" myself, I figured that people who are less skilled in a field deserves to be guided step-by-step, hand-in-hand, towards the correct direction, even if that means I would have to break down the "simple" logic and mechanisms, down to a smooth flow of knowledge that, while verbose, everyone can understand.
+Once I've become a semi-"pro" myself, I figured that people who are less skilled in a field deserve to be guided step-by-step, hand-in-hand, towards the correct direction, even if that means I would have to break down the "simple" logic and mechanisms, down to a smooth flow of knowledge that, while verbose, everyone can understand.
 
-This is the collection of those attempts. The topics of these snippets range from the basics of the basics — like boolean logic, bitwise operations, and even basic coding conventions — to the most specific details about some framework many had problems with; this is a very varied stew, and don't expect any kind of consistency if you're reading them in alphabetical order.
+This is the collection of those attempts. The topics of these snippets range from the most basic of the basics — like boolean logic, bitwise operations, and even basic coding conventions — to the most specific details about some framework many had problems with; this is a very varied stew, and don't expect any kind of consistency if you're reading them in alphabetical order.
 
 But that's enough blabbering from me, onward to the big ToC™...
 
