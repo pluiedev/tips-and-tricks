@@ -29,7 +29,7 @@ public abstract class TargetMixin
         if (arg > 4)
             System.out.println("greater than four! *gasps*");
         else
-            System.out.println("lesser than four! *boos*")
+            System.out.println("lesser than four! *boos*");
     }
 }
 

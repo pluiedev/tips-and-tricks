@@ -29,7 +29,7 @@ public abstract class TargetMixin implements TargetDuck {
         var newArr = new int[this.things.length + 1];
         
         // we copy over the existing elements to the new array
-        System.arraycopy(this.things, 0, newArr, 0, this.things.length)
+        System.arraycopy(this.things, 0, newArr, 0, this.things.length);
         
         // this is where the Mixin magic lies
         // just replace the old array with the new array 🤯
@@ -258,13 +258,13 @@ public abstract class TargetMixin implements TargetDuck {
 
             // also NB: use the constructor directly instead of `Lists.newArrayList`,
             // since that's totally obsolete since Java 7 and somehow Mojang is still using it.
-            System.out.println("making the list mutable...")
+            System.out.println("making the list mutable...");
             var mutable = new ArrayList<>(greetings);
             mutable.add(greeting);
             greetings = mutable; // when the list is no longer immutable 🦀
         } else {
             // mutable; just add to it directly
-            System.out.println("adding directly")
+            System.out.println("adding directly");
             greetings.add(greeting);
         }
     }
@@ -274,18 +274,18 @@ public abstract class TargetMixin implements TargetDuck {
 public class ConsumerClass {
     public void someFunc(Target target) {
         // before
-        System.out.println(target.greetings) // >> ["hi", "wassup", "yo"]
+        System.out.println(target.greetings); // >> ["hi", "wassup", "yo"]
 
         var duck = (TargetDuck) target;
         duck.modid$addGreeting("owo"); // >> making the list mutable...
 
         // after
-        System.out.println(target.greetings) // >> ["hi", "wassup", "yo", "owo"]
+        System.out.println(target.greetings); // >> ["hi", "wassup", "yo", "owo"]
 
         // add again
         duck.modid$addGreeting("hoi"); // >> adding directly
 
-        System.out.println(target.greetings) // >> ["hi", "wassup", "yo", "owo", "hoi"]
+        System.out.println(target.greetings); // >> ["hi", "wassup", "yo", "owo", "hoi"]
     }
 }
 ```
