@@ -1,7 +1,7 @@
 # Mixins Should Always Be `abstract`
 
 ## The TL;DR
-Mixins should always be `abstract`; they should be `abstract class`es for most mixins or `interface`s for invoker/accessor mixins.
+**Mixins should always be `abstract`;** they should be `abstract class`es for most mixins or `interface`s for invoker/accessor mixins.
 
 ```java
 // bad

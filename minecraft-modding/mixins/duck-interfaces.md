@@ -1,7 +1,7 @@
 # 🦆 interfaces
 
 ## The TL;DR
-Duck interfaces are things you can use to *implement new methods* on existing classes when used in conjunction with mixins.
+**Duck interfaces** are things you can use to *implement new methods* on existing classes when used in conjunction with mixins.
 
 For example:
 ```java
