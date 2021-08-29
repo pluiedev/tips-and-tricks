@@ -1,4 +1,5 @@
 # Mixins Should Always Be `abstract`
+> This article is **up to date** as of Mixin version `0.9.4` (last updated August 29th, 2021).
 
 ## The TL;DR
 **Mixins should always be `abstract`;** they should be `abstract class`es for most mixins or `interface`s for invoker/accessor mixins.

@@ -1,5 +1,6 @@
 # 🦆 interfaces
-
+> This article is **up to date** as of Mixin version `0.9.4` (last updated August 29th, 2021).
+> 
 ## The TL;DR
 **Duck interfaces** are things you can use to *implement new methods* on existing classes when used in conjunction with mixins.
 

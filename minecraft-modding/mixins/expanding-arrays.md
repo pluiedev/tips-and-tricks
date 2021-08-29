@@ -1,8 +1,9 @@
 # Expanding Arrays...
+> All following code snippets use **Yarn/Quilt Mappings** (version `1.17.1+build.25`), and are up to date as of Minecraft version **`1.17.1`**.
+
+> This article is **up to date** as of Mixin version `0.9.4` (last updated August 29th, 2021).
 
 [...and other immutable collections](#what-about-other-similarly-immutable-collections).
-
-> All following code snippets use **Yarn/Quilt Mappings** (version `1.17.1+build.25`), and are up to date as of Minecraft version **`1.17.1`**.
 
 ## The TL;DR
 ```java
@@ -212,6 +213,7 @@ public abstract class Entity implements Nameable, EntityLike, CommandOutput {
 			throw new IllegalStateException("Use x.startRiding(y), not y.addPassenger(x)");
 		} else {
 			if (this.passengerList.isEmpty()) {
+                // 🤨
 				this.passengerList = ImmutableList.of(entity);
 			} else {
                 // copy once
