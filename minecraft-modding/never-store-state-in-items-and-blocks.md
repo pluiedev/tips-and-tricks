@@ -97,7 +97,7 @@ With the knowledge of the flyweight pattern, we can immediately see why simply p
 
 ### That sounds great in theory and all, but *HOW* am I supposed to add data to them?
 
-Okay so I lied a little in the "everything is the same" narrative – obviously when you think about it, an open door can't be the same thing as a close door, can it? Or is a brand-new diamond pickaxe the same to one that has nearly no durability left?
+Okay so I lied a little in the "everything is the same" narrative – obviously when you think about it, an open door can't be the same thing as a closed door, can it? Or is a brand-new diamond pickaxe the same to one that has nearly no durability left?
 
 That's why Minecraft actually *stores* individual states, for individual blocks and item stacks! (Sorry for lying to you earlier. It's hard for me as well.) Instead, those shared instances share the things *in common*, like registry names, material, sound when you step on it, how many of those you can stack together, etc.
 
@@ -118,8 +118,8 @@ public void someMethod(ItemStack stack) {
 
     // just `get` the same type with the same key
     // when you want to use it again
-    var theAnswer = nbt.getBoolean("tAttUQoLTUaE"); // should be `42`
-    // and it does!
+    int theAnswer = nbt.getInt("tAttUQoLTUaE"); // should be `42`
+    // and it is!
     System.out.println(theAnswer); // >> 42
 }
 ```
